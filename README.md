@@ -23,12 +23,12 @@ Live app: <PASTE YOUR STREAMLIT COMMUNITY CLOUD URL HERE>
 project-folder/
 |-- app.py
 |-- utils.py
-|-- train\_models.py
+|-- train\\\_models.py
 |-- requirements.txt
 |-- README.md
-|-- test\_data.csv
-|-- data/ObesityDataSet\_raw\_and\_data\_sinthetic.csv
-|-- model/   (5 x .joblib pipelines, label\_encoder.joblib, meta.json, metrics.json)
+|-- test\\\_data.csv
+|-- data/ObesityDataSet\\\_raw\\\_and\\\_data\\\_sinthetic.csv
+|-- model/   (5 x .joblib pipelines, label\\\_encoder.joblib, meta.json, metrics.json)
 ```
 
 ## d. Models Used  \[5 marks]
@@ -58,7 +58,7 @@ project-folder/
 |KNN|Accuracy of 0.8278 and MCC of 0.8017 are mid-range, noticeably below the top three. Its AUC (0.9647) is better than its accuracy suggests. Distance-based voting is hurt by the many one-hot columns and by the overlapping neighbouring classes.|
 |Naive Bayes|The weakest by a wide margin: Accuracy 0.5144, F1 0.4521, MCC 0.4566, AUC 0.8376. It assumes the features are independent and Gaussian, which fails here. Height and Weight are strongly related, and the one-hot columns are binary, not Gaussian.|
 |Support Vector Machine|Accuracy 0.9115 and MCC 0.8967, second only to the Decision Tree. It has the highest AUC (0.9937), so it separates the classes best overall. The RBF kernel handles the curved boundaries well.|
-|**Overall, Winner for your dataset?**|Decision Tree is the winner. It has the highest Accuracy, Precision, Recall, F1 and MCC. I judged by MCC (0.9220) because it is a reliable single score for 7 classes. The SVM is a close second and has the best AUC (0.9937), so it is the better choice if well-calibrated class probabilities matter more than raw accuracy.<br /><br />Notes before you submit|
+|**Overall, Winner for your dataset?**|Decision Tree is the winner. It has the highest Accuracy, Precision, Recall, F1 and MCC. I judged by MCC (0.9220) because it is a reliable single score for 7 classes. The SVM is a close second and has the best AUC (0.9937), so it is the better choice if well-calibrated class probabilities matter more than raw accuracy.<br />|
 
 
 
