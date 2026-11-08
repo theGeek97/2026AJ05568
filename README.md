@@ -15,23 +15,12 @@ Estimate a person's obesity level (7 classes, from Insufficient Weight to Obesit
 
 ## c. GitHub Repository Link  \[1 mark]
 
-<PASTE YOUR GITHUB REPO URL HERE>
+https://github.com/theGeek97/2026AJ05568
 
-Live app: <PASTE YOUR STREAMLIT COMMUNITY CLOUD URL HERE>
+Live app: https://2026aj05568.streamlit.app/
 
 ```
-project-folder/
-|-- app.py
-|-- utils.py
-|-- train\\\_models.py
-|-- requirements.txt
-|-- README.md
-|-- test\\\_data.csv
-|-- data/ObesityDataSet\\\_raw\\\_and\\\_data\\\_sinthetic.csv
-|-- model/   (5 x .joblib pipelines, label\\\_encoder.joblib, meta.json, metrics.json)
-```
-
-## d. Models Used  \[5 marks]
+d. Models Used  \[5 marks]
 
 ### Comparison Table
 
