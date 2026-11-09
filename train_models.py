@@ -1,11 +1,3 @@
-# train_models.py
-# What it does:
-#   1. loads the obesity dataset
-#   2. cleans / prepares the data
-#   3. splits it into training data and test data
-#   4. trains the 5 models and calculates their scores
-#   5. saves the trained models and test_data.csv so the Streamlit app can use them
-
 from pathlib import Path
 import json
 import joblib
@@ -31,7 +23,8 @@ MODEL_DIR = Path("model") # folder where trained models will be saved
 # Places where the program will look for the dataset file
 CSV_CANDIDATES = [Path("data/ObesityDataSet_raw_and_data_sinthetic.csv"),
                   Path("ObesityDataSet_raw_and_data_sinthetic.csv"),
-                  Path("data/ObesityDataSet.csv")]
+                  Path("data/ObesityDataSet.csv"),Path("test_data.csv")
+                  ]
 
 
 def load_data():

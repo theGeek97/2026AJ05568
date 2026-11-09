@@ -1,7 +1,4 @@
 # app.py
-# Streamlit web app.  Run locally with:   streamlit run app.py
-# It does NOT train anything. It loads the models saved by train_models.py,
-# takes a test CSV from the user and shows how well each model performs on it.
 
 from pathlib import Path
 import json
@@ -14,7 +11,9 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 from utils import MODEL_FILES, compute_metrics
 
-MODEL_DIR = Path(__file__).parent / "model"
+# Fix NameError: Use __file__ only if it exists in the globals namespace, otherwise use current working directory
+CURRENT_DIR = Path(__file__).parent if "__file__" in globals() else Path.cwd()
+MODEL_DIR = CURRENT_DIR / "model"
 st.set_page_config(page_title="Obesity Level Classifier", layout="wide")
 
 
@@ -47,8 +46,8 @@ with st.sidebar:
 # ---------------- Read the CSV ----------------
 if uploaded is not None:
     df = pd.read_csv(uploaded)
-elif use_sample and (Path(__file__).parent / "test_data.csv").exists():
-    df = pd.read_csv(Path(__file__).parent / "test_data.csv")
+elif use_sample and (CURRENT_DIR / "test_data.csv").exists():
+    df = pd.read_csv(CURRENT_DIR / "test_data.csv")
 else:
     # Nothing uploaded yet, so show instructions and stop here
     st.info("Please upload a test CSV from the sidebar. It must contain the input "
